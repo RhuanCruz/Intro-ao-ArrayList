@@ -3,3 +3,36 @@
  // faz parte da API java Cllections
 
 //Array list é uma classe generica
+import java.util.ArrayList;
+import java.util.Scanner;
+
+// Introdução ao ArrayList
+ 
+ 
+public class Arraylist{
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        double media = 0;
+
+         ArrayList<Integer> valores = new ArrayList<>();
+            int i = 0;
+        while ( valores.get(i) >= 0) {
+            System.out.println("Digite:");
+            valores.add(teclado.nextInt());
+            i++;
+        }
+
+      
+
+        for (int j = 0; j < valores.size(); j++) {
+            if(valores.get(i) >= 0){
+                media += valores.get(i);
+            }
+        }
+        media /= valores.size();
+
+        System.out.println(media);
+        teclado.close();
+    }
+
+}
